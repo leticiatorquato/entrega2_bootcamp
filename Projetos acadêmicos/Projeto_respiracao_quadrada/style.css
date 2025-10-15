@@ -103,7 +103,7 @@ box-shadow: 0 0 1em rgba(47, 65, 86, 1);
 }
 
 /*estilização dos inputs*/
-#input_minuto, #input_segundo {
+#input-minuto, #input-segundo {
     background-color: rgba(47, 65, 86, 1);
     width: 2.5em;
     border-radius: 0.3em;
@@ -141,4 +141,47 @@ header {
 }
 
 
+/*estilização botão de tema*/
+
+#botao-tema {
+    margin-top: 2em;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 0 0.5em rgba(47, 65, 86, 1);
+}
+
+#botao-tema:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/*estilização do tema escuro*/
+
+.modo-escuro {
+    background-image: linear-gradient(rgba(18, 25, 35, 1), rgba(47, 65, 86, 1));
+    color: #e0e0e0;
+}
+
+.modo-escuro #caixa-temporizador {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+}
+
+.modo-escuro #input-minuto,
+.modo-escuro #input-segundo,
+.modo-escuro #temporizador {
+    background-color: rgba(30, 40, 50, 1);
+    color: #ffffff;
+    border-color: #999;
+}
+
+.modo-escuro #botao-tema {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
 

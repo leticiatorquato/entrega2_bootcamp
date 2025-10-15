@@ -10,7 +10,7 @@
 
 </head>
 
-<audio id="musica_ambiente" src="musica/musica_ambiente.mp3" loop></audio> <!--música de fundo-->
+<audio id="musica-ambiente" src="musica/musica_ambiente.mp3" loop></audio> <!--música de fundo-->
 
 <body>
 
@@ -53,15 +53,16 @@
        
     </main>
 
+
     <div id="caixa-temporizador"> <!--estrutura do temporizador-->
 
-        <div id="texto_temporizador"> <!--texto explicativo do temporizador-->
+        <div id="texto-temporizador"> <!--texto explicativo do temporizador-->
             Defina por quanto tempo você deseja realizar a respiração quadrada:
         </div>
 
         <div id="inputs"> <!--inputs para definir o tempo do temporizador--> 
-            <label>Minutos: <input type="number" id="input_minuto" min="0"  value="1"></label>
-            <label>Segundos: <input type="number" id="input_segundo" min="0" max="59" value="36"></label>
+            <label>Minutos: <input type="number" id="input-minuto" min="0"  value="1"></label>
+            <label>Segundos: <input type="number" id="input-segundo" min="0" max="59" value="36"></label>
         </div>
     
 
@@ -69,13 +70,15 @@
         01:36
         </div>
     
-        <div id="caixa_botoes"> <!--Estrutura dos botões-->
+        <div id="caixa-botoes"> <!--Estrutura dos botões-->
             <button onclick="iniciar()" id="botao_iniciar" class="botao"> <i class="bi bi-play-fill"></i></button> <!--botão de iniciar-->
             <button onclick="pausar()" id="botao_pausar" class="botao"><i class="bi bi-pause-fill"></i></button> <!--botão de pausar-->
             <button onclick="resetar()" id="botao_resetar" class="botao"><i class="bi bi-stop-fill"></i></button> <!--botão de resetar-->
         </div>
 
     </div>
+    
+    <button id="botao-tema">🌙 Modo escuro</button> <!--botão do tema-->
 
     <header>* A respiração quadrada é um apoio para o seu bem-estar, mas não substitui o acompanhamento de um profissional de saúde. Se estiver passando por um momento difícil, busque ajuda. </header>
 

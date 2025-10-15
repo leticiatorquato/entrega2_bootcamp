@@ -1,5 +1,5 @@
 //variável da música ambiente
-const musica= document.getElementById("musica_ambiente");
+const musica= document.getElementById("musica-ambiente");
 
 //variáveis do pulmão e da borda
 const pulmao= document.getElementById("pulmao");    
@@ -31,8 +31,8 @@ function iniciar() {
     //define o tempo que deve aparecer no temporizador ao clicar no botão iniciar
     if (!intervalo){ 
         if (temporestante === undefined){
-            minuto= parseInt(document.getElementById("input_minuto").value) || 0;
-            segundo= parseInt(document.getElementById("input_segundo").value) || 0;
+            minuto= parseInt(document.getElementById("input-minuto").value) || 0;
+            segundo= parseInt(document.getElementById("input-segundo").value) || 0;
             tempototal=minuto*60+segundo;
             temporestante=tempototal;
             
@@ -73,8 +73,8 @@ function resetar() {
   intervalo = null;
 
   //atualiza o temporizador com o valor do input atual
-  minuto= parseInt(document.getElementById("input_minuto").value) || 0;
-  segundo= parseInt(document.getElementById("input_segundo").value) || 0;
+  minuto= parseInt(document.getElementById("input-minuto").value) || 0;
+  segundo= parseInt(document.getElementById("input-segundo").value) || 0;
   tempototal=minuto*60+segundo;
   temporestante=tempototal;
 
@@ -96,7 +96,30 @@ function resetar() {
   //assegura que na próxima vez que o iniciar for executado, o temporizador pegue o tempo atual
   temporestante= undefined;
 }
-    
+
+//variável do botão de troca de tema
+const botaotema = document.getElementById("botao-tema");
+
+//variável que verifica o tema salvo no localStorage
+const temasalvo = localStorage.getItem("tema");
+   
+//função que troca o tema claro/escuro
+if (temasalvo === "escuro") {
+  document.body.classList.add("modo-escuro");
+  botaotema.textContent = "☀️ Modo Claro";
+}
+
+botaotema.addEventListener("click", () => {
+  document.body.classList.toggle("modo-escuro");
+
+  if (document.body.classList.contains("modo-escuro")) {
+    botaotema.textContent = "☀️ Modo Claro";
+    localStorage.setItem("tema", "escuro");
+  } else {
+    botaotema.textContent = "🌙 Modo Escuro";
+    localStorage.setItem("tema", "claro");
+  }
+});
 
     
 
